@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block head %}
+<link href="static/contacts.css" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+<div class="content">
+    <h1 style="color: gray; margin-top: 75px">КОНТАКТНА ІНФОРМАЦІЯ</h1>
+
+    <div class="table">
+        <div class="tableRow" style="margin-right: 20px;">
+            <div style="min-width: 150px; color: blue">
+                <img src="static/phone.png">
+            </div>
+            <div>+38 (097) 284 9100</div>
+        </div>
+        <div class="tableRow">
+            <div style="min-width: 150px; color: blue">
+                <img src="static/address.png">
+            </div>
+            <div>Shevchenka Blvd, 460, Cherkasy, Cherkasy Oblast, 18000</div>
+        </div>
+    </div>
+
+    <h2 style="color: gray; margin: 50px 0 0 0">ЗАЛИШИТИ ВІДГУК</h2>
+
+    <form action="/send-comment" method="POST">
+        {% csrf_token %}
+        {{ comment_form }}
+        <input type="submit" value="Відгукнутися" style="margin-top: 10px; margin-left: auto">
+    </form>
+</div>
+{% endblock content %}
