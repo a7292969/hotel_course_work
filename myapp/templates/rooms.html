@@ -8,23 +8,17 @@
         <h1>НОМЕРИ</h1>
     </div>
     <div class="inner">
-
         {% for room in rooms %}
-        <div class="room">
-            <img src="{{room.img}}" class="img" obje>
-            <h3>{{room.name}}</h3>
+        <a href="/room?id={{room.id}}" class="room">
+            <img src="{{room.img}}" class="img">
+            <h3>
+                {{room.name}}
+                <span style="float: right">{{room.price}} UAH</span>
+            </h3>
             <hr>
-            <p>{{room.description}}</p>
-        </div>
+            <p>{{room.summary}}</p>
+        </a>
         {% endfor %}
-
-        {% comment %} <img class="img"
-            src="https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg">
-        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
-        <img class="img" src="https://haski.ua/wp-content/themes/xacki/img/intro-home-bg-3.png">
-        <img class="img"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1920px-Meta_Platforms_Inc._logo.svg.png">
-        {% endcomment %}
     </div>
 </div>
 {% endblock content %}

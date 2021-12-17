@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head %}
+<link href="static/room.css" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+<div class="content">
+    <div class="topHeader">
+        <h1>Номер {{room.name|upper}}</h1>
+    </div>
+    <div class="inner">
+        <div class="room">
+            <img src="{{room.img}}" class="img" obje>
+            <div>
+                <h3>{{room.name}}</h3>
+                <hr>
+                <p style="padding: 10px 0">{{room.description}}</p>
+                <hr>
+                <p style="font-weight: 500; font-size: 24px">{{room.price}} UAH</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block head %}
+<link href="static/reviews.css" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+<div class="content">
+    <div class="topHeader">
+        <h1>ВІДГУКИ ПРО НАС</h1>
+    </div>
+
+    <div class="inner">
+        <div class="comments">
+            {% for comm in comments %}
+            <div class="comment">
+                <h3>{{comm.name}}</h3>
+                <p>{{comm.text}}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2 style="color: gray; margin: 20px 0 0 0">ЗАЛИШИТИ ВІДГУК</h2>
+
+        <form action="/send-comment" method="POST">
+            {% csrf_token %}
+            {{ comment_form }}
+            <input type="submit" value="Відгукнутися" style="margin-top: 10px; margin-left: auto">
+        </form>
+    </div>
+</div>
+{% endblock content %}

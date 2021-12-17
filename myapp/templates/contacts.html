@@ -4,29 +4,29 @@
 {% endblock head %}
 {% block content %}
 <div class="content">
-    <h1 style="color: gray; margin-top: 75px">КОНТАКТНА ІНФОРМАЦІЯ</h1>
-
-    <div class="table">
-        <div class="tableRow" style="margin-right: 20px;">
-            <div style="min-width: 150px; color: blue">
-                <img src="static/phone.png">
-            </div>
-            <div>+38 (097) 284 9100</div>
-        </div>
-        <div class="tableRow">
-            <div style="min-width: 150px; color: blue">
-                <img src="static/address.png">
-            </div>
-            <div>Shevchenka Blvd, 460, Cherkasy, Cherkasy Oblast, 18000</div>
-        </div>
+    <div class="topHeader">
+        <h1>КОНТАКТНА ІНФОРМАЦІЯ</h1>
     </div>
 
-    <h2 style="color: gray; margin: 50px 0 0 0">ЗАЛИШИТИ ВІДГУК</h2>
+    <div class="inner">
+        <div class="table">
+            <div class="tableRow" style="margin-right: 20px;">
+                <div style="min-width: 70px; color: blue">
+                    <img style="width: 50px;" src="static/phone.png">
+                </div>
+                <div>+38 (097) 666 9100</div>
+            </div>
+            <div class="tableRow">
+                <div style="min-width: 70px; color: blue">
+                    <img style="width: 50px;" src="static/address.png">
+                </div>
+                <div>Shevchenka Blvd, 460, Cherkasy, Cherkasy Oblast, 18000</div>
+            </div>
+        </div>
 
-    <form action="/send-comment" method="POST">
-        {% csrf_token %}
-        {{ comment_form }}
-        <input type="submit" value="Відгукнутися" style="margin-top: 10px; margin-left: auto">
-    </form>
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1510.1933325157222!2d30.45901380757623!3d50.46284708741633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdd5b9fac917%3A0x5d2058b969711a68!2z0LLRg9C70LjRhtGPINCU0LXQs9GC0Y_RgNGW0LLRgdGM0LrQsCwgMjEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1639735859735!5m2!1suk!2sua"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 </div>
 {% endblock content %}

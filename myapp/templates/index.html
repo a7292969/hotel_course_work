@@ -4,49 +4,42 @@
 {% endblock head %}
 {% block content %}
 <div class="content">
-    <p class="heading">Найкращі Номери у Світі!</p>
-
-
-    <h2 style="margin: 50px 0 20px 0; color: white">Наші сервіси</h2>
-    <div class="services">
-        <div class="service">
-            <span>ТБ</span>
-            <img src="/static/tv.png">
-        </div>
-        <div class="service">
-            <span>Сніданки</span>
-            <img src="/static/coffee.png">
-        </div>
-        <div class="service">
-            <span>Wi-Fi</span>
-            <img src="/static/wifi.png">
-        </div>
-        <div class="service">
-            <span>Паркінг</span>
-            <img src="/static/parking.png">
-        </div>
-        <div class="service">
-            <span>Пральня</span>
-            <img src="/static/washing.png">
-        </div>
-        <div class="service">
-            <span>Персональний Сейф</span>
-            <img src="/static/safebox.png">
-        </div>
-        <div class="service">
-            <span>Міні-бар</span>
-            <img src="/static/minibar.png">
-        </div>
+    <div class="mainHeader">
+        <p class="heading">Найкращі Номери у Світі!</p>
     </div>
 
-    <h2 style="margin: 30px 0 20px 0; color: white">Відгуки про Нас</h2>
-    <div class="comments">
-        {% for comm in comments %}
-        <div class="comment">
-            <h3>{{comm.name}}</h3>
-            <p>{{comm.text}}</p>
+    <main class="mainContent">
+        <h2 style="margin: 50px 0 20px 0; color: white; filter: drop-shadow(0 0 10px black)">Наші сервіси</h2>
+        <div class="services">
+            <div class="service">
+                <span>ТБ</span>
+                <img src="/static/tv.png">
+            </div>
+            <div class="service">
+                <span>Сніданки</span>
+                <img src="/static/coffee.png">
+            </div>
+            <div class="service">
+                <span>Wi-Fi</span>
+                <img src="/static/wifi.png">
+            </div>
+            <div class="service">
+                <span>Паркінг</span>
+                <img src="/static/parking.png">
+            </div>
+            <div class="service">
+                <span>Пральня</span>
+                <img src="/static/washing.png">
+            </div>
+            <div class="service">
+                <span>Персональний Сейф</span>
+                <img src="/static/safebox.png">
+            </div>
+            <div class="service">
+                <span>Міні-бар</span>
+                <img src="/static/minibar.png">
+            </div>
         </div>
-        {% endfor %}
-    </div>
+    </main>
 </div>
 {% endblock content %}

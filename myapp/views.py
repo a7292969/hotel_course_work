@@ -6,13 +6,23 @@ from .models import Comment, Room
 
 
 def index(req):
-    comments = Comment.objects.all()
-    return render(req, 'index.html', {'comments': comments})
+    return render(req, 'index.html')
 
 
 def rooms(req):
     rooms = Room.objects.all()
     return render(req, 'rooms.html', {'rooms': rooms})
+
+
+def room(req):
+    room = Room.objects.get(id=req.GET['id'])
+    return render(req, 'room.html', {'room': room})
+
+
+def reviews(req):
+    comments = Comment.objects.all()
+    comment_form = CommentForm()
+    return render(req, 'reviews.html', {'comments': comments, 'comment_form': comment_form})
 
 
 def contacts(req):

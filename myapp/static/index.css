@@ -4,9 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(/static/rooms.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .title {
@@ -19,6 +16,30 @@
     font-size: 36px;
     margin-top: 50px;
     color: white;
+    filter: drop-shadow(0 0 10px black);
+}
+
+.mainHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background-image: url(/static/room1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0 100px 0;
+    margin-top: 4px;
+    background-image: url(/static/rooms.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .img {
@@ -30,7 +51,7 @@
     justify-content: center;
     flex-wrap: wrap;
     min-width: 0;
-    max-width: 1000px;
+    max-width: 600px;
     gap: 30px;
     margin-bottom: 50px;
 }
@@ -49,33 +70,6 @@
     font-size: 24px;
 }
 
-.comments {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    min-width: 0;
-    max-width: 1000px;
-    gap: 30px;
-    margin-bottom: 50px;
+.service img {
+    width: 50px;
 }
-
-.comment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(240, 236, 236);
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 700px;
-}
-
-.comment h3 {
-    align-self: flex-start;
-    padding-bottom: 5px;
-}
-
-/* .comment span {
-    margin-bottom: 20px;
-    font-size: 24px;
-} */

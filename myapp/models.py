@@ -6,7 +6,8 @@ class Room(models.Model):
     img = models.CharField(max_length=500)
     name = models.CharField(max_length=100)
     price = models.IntegerField()
-    description = models.CharField(max_length=500)
+    summary = models.CharField(max_length=500)
+    description = models.CharField(max_length=1000)
 
     def __str__(self):
         return self.name + " " + str(self.price)
